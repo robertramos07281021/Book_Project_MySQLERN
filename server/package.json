@@ -1,0 +1,31 @@
+{
+  "name": "mern-m-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:server": "nodemon server.js --ignore ../client/",
+    "dev:client": "npm run dev --prefix ../client/",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "start": "set NODE_ENV=production&& node server.js --ignore ../client/",
+    "build": "npm run build --prefix ../client/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
